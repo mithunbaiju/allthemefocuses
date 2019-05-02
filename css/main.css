@@ -1,1 +1,38 @@
-/* No CSS *//*# sourceMappingURL=main.css.map */
+body {
+  color: black;
+}
+
+.header {
+  border-bottom: 1px solid #ddd;
+}
+
+.site-inner {
+  background-color: #f5f6f8;
+}
+
+.wrap {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.site-inner .wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.site-inner .wrap .content-main {
+  max-width: 70%;
+}
+
+.site-inner .wrap .sidebar {
+  width: 30%;
+}
+
+.entry, .sidebar-widgets {
+  background-color: white;
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 12px;
+}
+/*# sourceMappingURL=main.css.map */

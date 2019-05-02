@@ -1,9 +1,59 @@
 // Variables
+$header-bg: #0A2540;
+$header-font: #fff;
+
+$footer-bg:#0D0D0D;
+$footer-creds: #262626;
+
+$footer-main-font: #fff;
+$footer-creds-font: #fff;
+
+$link-color: #0F69A9;
+
+$def-font-color: black;
+
+$def-font-size: 16px;
+
+$container-width: 1140px;
 
 // Main Body
 
+body{
+    color: $def-font-color;
+}
+
 // Header
+.header {
+    border-bottom: 1px solid #ddd;
+}
+
 
 // Site Inner
+
+.site-inner {
+    background-color: #f5f6f8;
+}
+
+.wrap{
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.site-inner .wrap{
+    display: flex;
+    .content-main{
+        max-width: 70%;
+    }
+    .sidebar{
+        width: 30%; 
+    }
+}
+
+.entry, .sidebar-widgets {
+    background-color: white;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 12px;
+}
 
 // Footer
