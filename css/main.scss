@@ -16,10 +16,30 @@ $def-font-size: 16px;
 
 $container-width: 1140px;
 
+$def-font: 'Lato', sans-serif;
+$def-head-font: 'Montserrat', sans-serif;
+
 // Main Body
+
+html,
+body{
+    box-sizing: border-box;
+}
 
 body{
     color: $def-font-color;
+    font-family: $def-font;
+    font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $def-head-font;
+    font-weight: 600;
 }
 
 // Header
@@ -49,11 +69,18 @@ body{
     }
 }
 
-.entry, .sidebar-widgets {
+.entry {
+}
+
+.entry{
+    background-color: white;
+    border-radius: 3px;
+    padding: 0;
+} 
+.sidebar-widgets {
     background-color: white;
     padding: 1rem;
-    margin: 1rem;
-    border-radius: 12px;
+    border-radius: 3px;
 }
 
 // Footer
