@@ -8,16 +8,17 @@ $footer-creds: #262626;
 $footer-main-font: #fff;
 $footer-creds-font: #fff;
 
+$entry-meta-border: rgba(52, 73, 94,1.0);
+$entry-meta-bg: rgba(52, 73, 94,0.125);
+$entry-meta-font: rgba(47, 54, 64,1.0);
+
 $link-color: #0F69A9;
 
-$def-font-color: black;
+$def-font-color: rgba(0, 0, 0, 0.548);
 
 $def-font-size: 16px;
 
 $container-width: 1140px;
-
-$def-font: 'Lato', sans-serif;
-$def-head-font: 'Montserrat', sans-serif;
 
 // Main Body
 
@@ -27,8 +28,8 @@ body{
 }
 
 body{
+    font-family: 'Nunito', sans-serif;
     color: $def-font-color;
-    font-family: $def-font;
     font-weight: 400;
 }
 
@@ -38,8 +39,25 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: $def-head-font;
-    font-weight: 600;
+    font-weight: 700;
+}
+
+a,
+button,
+input:focus,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+textarea:focus,
+.button,
+.gallery img,
+.post-content,
+.entry-title {
+	-webkit-transition: all 0.1s ease-in-out;
+	-moz-transition:    all 0.1s ease-in-out;
+	-ms-transition:     all 0.1s ease-in-out;
+	-o-transition:      all 0.1s ease-in-out;
+	transition:         all 0.1s ease-in-out;
 }
 
 // Header
@@ -52,35 +70,58 @@ h6 {
 
 .site-inner {
     background-color: #f5f6f8;
-}
-
-.wrap{
-    max-width: 1140px;
-    margin: 0 auto;
-}
-
-.site-inner .wrap{
-    display: flex;
-    .content-main{
-        max-width: 70%;
-    }
-    .sidebar{
-        width: 30%; 
-    }
-}
-
-.entry {
+    padding: 2rem 0;
 }
 
 .entry{
     background-color: white;
-    border-radius: 3px;
     padding: 0;
-} 
+}
+.post-list{
+    flex-wrap: wrap;    
+}
+.entry {
+    border-bottom-right-radius: 12px;
+    border-bottom-left-radius: 12px;
+    border-radius: 12px;
+    margin: 0.75rem;
+    .post-image img{
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+    }
+    .entry-meta {
+        display: none;
+    }
+    .post-content {
+        padding: 0.75rem;
+        border-bottom-right-radius: 12px;
+        border-bottom-left-radius: 12px;
+        box-shadow: 0px 15px 45px -9px rgba(0,0,0,0.20);
+        .entry-title{
+            font-size: 1.5rem;
+            line-height: 1.25;
+        }
+        &:hover{
+            box-shadow: none;
+            h2.entry-title {
+                color: black;
+            }
+        }
+    }
+}
 .sidebar-widgets {
-    background-color: white;
     padding: 1rem;
-    border-radius: 3px;
+    background: transparent;
+    li a{
+        display: block;
+        padding: 0.5rem;
+        background-color: #2f3640;
+        border-bottom: 1px solid #000;
+        color: #fff;
+        &:hover{
+            background: #353b48 ;
+        }
+    }
 }
 
 // Footer
